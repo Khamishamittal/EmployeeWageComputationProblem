@@ -1,12 +1,18 @@
 echo "Welcome to origin masterEmployee Wage Computation Program"
 
+
 isparttime=1;
 isfulltime=2;
+Maxhrsinmonth=10;
 emprateperhr=20;
 numworkingdays=20;
 
-for (( day=1; day<=$numworkingdays; day++ ))
+totalemphr=0;
+totalworkingdays=0;
+
+while [[ $totalemphr -lt $Maxhrsinmonth && $totalworkingdays -lt $numworkingdays ]]
 do
+   (( totalworkingdays++ ))
    empcheck=$(( RANDOM%3 ));
          case $empcheck in
                 $isfulltime)
@@ -16,10 +22,12 @@ do
                                 *)
                         emphrs=0 ;;
         esac
+        totalemphrs=$(( $totalemphrs+$emphrs ))
 
-echo $salary=$(( $emphrs*$emprateperhr ));
+$totalemphrs=$(( $emphrs*$emprateperhr ));
 done
 
+echo totalSalary=$(( $totalemphrs*$emprateperhr ))
 
 
 
