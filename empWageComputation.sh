@@ -1,18 +1,22 @@
 echo "Welcome to origin masterEmployee Wage Computation Program"
 
-ispresent=0;
-randomCheck=$(( RANDOM%2 ));
-if [ $ispresent -eq $randomCheck ];
+
+isparttime=1;
+isfulltime=2;
+emprateperhr=20;
+randomCheck=$(( RANDOM%3 ));
+if [ $isfulltime -eq $randomCheck ]
 then
-        empRateperh=20;
-        emph=8;
-        salary=$(( $empRateperh*$emph ));
-        echo $salary;
+emphrs=8;
+elif [ $isparttime -eq $randomCheck ]
+then
+emphrs=4;
 else
-    salary=0;
-    echo $salary
+emphrs=0;
 fi
 
+salary=$(( $emphrs*$emprateperhr ));
+echo $salary
 
 
 
