@@ -1,6 +1,7 @@
 echo "Welcome to origin masterEmployee Wage Computation Program"
 
 
+
 isPartTime=1;
 isFullTime=2;
 empHrs=0;
@@ -10,6 +11,7 @@ empRatePerHr=20;
 numWorkingDays=20;
 day=1;
 
+declare -A day
 function calculateWorkingHour(){
 	case $randomCheck in 
 		     $isFullTime)
@@ -41,6 +43,7 @@ randomCheck=$((RANDOM%3));
 	((day++));
 echo "Daily Wage: " ${salary[*]}
 echo "Total Salary: " ${totalSalary[*]}
+echo "Day; " ${day[*]}
 done
 
 echo "Employee has earned $totalSalary $ in a month (Total working Hour : $totalWorkingHour";
