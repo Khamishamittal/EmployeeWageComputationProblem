@@ -1,7 +1,5 @@
 echo "Welcome to origin masterEmployee Wage Computation Program"
 
-
-
 isPartTime=1;
 isFullTime=2;
 empHrs=0;
@@ -46,7 +44,7 @@ echo "Total Salary: " ${totalSalary[*]}
 echo "Day; " ${day[*]}
 done
 
-echo "Employee has earned $totalSalary $ in a month (Total working Hour : $totalWorkingHour";
+echo "Employee has earned $totalSalary $ in a month (Total working Hour : $totalWorkingHour)"
 
 
 
